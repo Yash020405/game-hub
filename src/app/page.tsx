@@ -173,6 +173,7 @@ export default function Home() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [userProgress, setUserProgress] = useState<any[]>([]);
   const [totalScore, setTotalScore] = useState(0);
+  const [signingOut, setSigningOut] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -269,13 +270,24 @@ export default function Home() {
                     <User className="w-5 h-5 text-white" />
                   </motion.div>
                   <motion.button
-                    onClick={signOut}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-4 py-2.5 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 hover:border-red-500/50 text-red-400 hover:text-red-300 rounded-xl transition-all duration-200 flex items-center space-x-2 backdrop-blur-sm"
+                    onClick={async () => {
+                      try {
+                        setSigningOut(true)
+                        await signOut()
+                      } catch (error) {
+                        console.error('Sign out error:', error)
+                        setSigningOut(false)
+                      }
+                    }}
+                    disabled={signingOut}
+                    whileHover={!signingOut ? { scale: 1.05 } : {}}
+                    whileTap={!signingOut ? { scale: 0.95 } : {}}
+                    className={`px-4 py-2.5 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 hover:border-red-500/50 text-red-400 hover:text-red-300 rounded-xl transition-all duration-200 flex items-center space-x-2 backdrop-blur-sm ${signingOut ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
-                    <LogOut className="w-4 h-4" />
-                    <span className="hidden sm:inline font-medium">Sign Out</span>
+                    <LogOut className={`w-4 h-4 ${signingOut ? 'animate-spin' : ''}`} />
+                    <span className="hidden sm:inline font-medium">
+                      {signingOut ? 'Signing Out...' : 'Sign Out'}
+                    </span>
                   </motion.button>
                 </div>
               </motion.div>
