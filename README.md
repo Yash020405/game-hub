@@ -9,7 +9,7 @@ Instead of staring at textbook diagrams, you can actually *play* with graph algo
 ## 🎥 Demo & Live Site
 
 - **🎬 Demo Video:** [Add your demo video link here]
-- **🌐 Live Demo:** [Add your deployment link here]
+- **🌐 Live Demo:** [https://graph-game-hub.vercel.app/]
 
 ## 🎮 Available Games
 
