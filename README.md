@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Graph Game Hub 🎮
 
-## Getting Started
+An interactive learning platform that makes graph algorithms fun and accessible through gamification. Learn complex computer science concepts by playing engaging games that visualize how algorithms work in real-time.
 
-First, run the development server:
+## 🎯 What is this?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Instead of staring at textbook diagrams, you can actually *play* with graph algorithms. Each game teaches you a different algorithm or concept through hands-on interaction. Whether you're a CS student trying to understand Dijkstra's algorithm or a developer wanting to brush up on graph theory, this platform makes learning intuitive and enjoyable.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎥 Demo & Live Site
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **🎬 Demo Video:** [Add your demo video link here]
+- **🌐 Live Demo:** [Add your deployment link here]
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎮 Available Games
 
-## Learn More
+### Core Algorithm Games
+- **Graph Traversal** - Learn BFS and DFS by navigating through node networks
+- **Shortest Path** - Visualize Dijkstra's algorithm finding optimal routes
+- **Minimum Spanning Tree** - Build efficient networks with Kruskal's and Prim's algorithms
+- **Topological Sort** - Understand dependency ordering in directed graphs
+- **Graph Coloring** - Solve the classic vertex coloring problem step by step
 
-To learn more about Next.js, take a look at the following resources:
+### Interactive Challenges
+- **Graph Builder** - Create custom graphs and experiment with different structures
+- **Graph Puzzles** - Solve logic puzzles that teach graph properties
+- **Drawing Challenge** - Draw graphs to meet specific criteria and constraints
+- **Social Network** - Analyze real-world network patterns and connections
+- **Graph Matching** - Find perfect matchings in bipartite graphs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Classic Games with Graph Twists
+- **Escape the Maze** - Pathfinding algorithms in action
+- **Graph Tetris** - Connection-based puzzle mechanics
+- **Snake & Ladders** - Probability and Markov chain analysis
+- **Graph Memory** - Pattern recognition with graph symbols
+- **Graph Sudoku** - Constraint satisfaction problems
+- **Classic Minesweeper** - Logical deduction and graph relationships
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+- Progressive learning from basics to advanced concepts
+- Real-time algorithm visualization
+- Score & progress tracking with user authentication
+- Responsive design for all devices
+- Learn at your own pace (no timers except maze game)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 15 with React 19
+- Tailwind CSS with Framer Motion
+- D3.js for graph visualization
+- Three.js for 3D graphics
+- Supabase for auth and database
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Supabase account
+
+### Installation
+
+1. Clone and install:
+   ```bash
+   git clone [your-repo-url]
+   cd game-hub
+   npm install
+   ```
+
+2. Set up environment:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Add your Supabase credentials to `.env.local`
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000)
+
+## 🎓 Learning Path
+
+**Beginner:** Graph Builder → Graph Traversal → Maze  
+**Intermediate:** Graph Coloring → Shortest Path → Social Network  
+**Advanced:** Topological Sort → Minimum Spanning Tree → Graph Matching
+
+## 📝 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
