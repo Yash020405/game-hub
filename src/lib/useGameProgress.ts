@@ -24,11 +24,16 @@ export function useGameProgress(gameName: string) {
   useEffect(() => {
     if (user && !sessionInitialized) {
       loadProgress()
-    } else if (!user && sessionInitialized) {
-      // Reset for guest
-      setProgress(null)
+    } else if (!user && !sessionInitialized) {
+      // Initialize for guest user
+      console.log('Initializing guest session')
+      setProgress({ level: 1, high_score: 0, score: 0 })
       setCurrentScore(0)
-      setSessionInitialized(false)
+      setSessionInitialized(true)
+    } else if (!user && sessionInitialized) {
+      // Reset for guest when switching from authenticated to guest
+      setProgress({ level: 1, high_score: 0, score: 0 })
+      setCurrentScore(0)
     }
   }, [user, gameName])
 
