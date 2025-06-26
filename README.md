@@ -61,7 +61,7 @@ Instead of staring at textbook diagrams, you can actually *play* with graph algo
 
 1. Clone and install:
    ```bash
-   git clone [your-repo-url]
+   git clone https://github.com/Yash020405/game-hub.git
    cd game-hub
    npm install
    ```
